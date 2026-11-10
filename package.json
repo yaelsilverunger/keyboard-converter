@@ -1,0 +1,40 @@
+{
+  "name": "keyboard-converter",
+  "version": "1.0.0",
+  "description": "Convert text typed with wrong keyboard layout",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "node scripts/create-icon.js && electron-builder",
+    "build:mac": "node scripts/create-icon.js && electron-builder --mac"
+  },
+  "devDependencies": {
+    "electron": "latest",
+    "electron-builder": "latest"
+  },
+  "build": {
+    "appId": "com.keyboard-converter",
+    "productName": "Keyboard Converter",
+    "files": [
+      "main.js",
+      "converter.js",
+      "renderer.js",
+      "index.html",
+      "styles.css"
+    ],
+    "mac": {
+      "target": "dmg",
+      "icon": "icon.png",
+      "category": "public.app-category.utilities"
+    },
+    "win": {
+      "target": [{ "target": "nsis", "arch": ["x64"] }],
+      "icon": "icon.png"
+    },
+    "nsis": {
+      "oneClick": true,
+      "perMachine": false,
+      "deleteAppDataOnUninstall": true
+    }
+  }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Keyboard Layout Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Keyboard Layout Converter</h1>
+      <p class="subtitle">Fix text typed with the wrong keyboard language</p>
+    </div>
+
+    <div class="controls">
+      <button class="dir-btn" data-dir="auto">Auto-detect</button>
+      <button class="dir-btn" data-dir="heb-to-eng">Hebrew &rarr; English</button>
+      <button class="dir-btn" data-dir="eng-to-heb">English &rarr; Hebrew</button>
+    </div>
+    <div class="auto-label" id="auto-label"></div>
+
+    <div class="panels">
+      <div class="panel">
+        <label class="panel-label">Wrongly typed text</label>
+        <textarea
+          id="input"
+          dir="auto"
+          placeholder="Paste or type your wrongly-typed text here..."
+          spellcheck="false"
+        ></textarea>
+      </div>
+
+      <div class="center-col">
+        <button id="swap-btn" title="Use result as new input">&#8644;</button>
+      </div>
+
+      <div class="panel">
+        <div class="panel-header">
+          <label class="panel-label">Converted text</label>
+          <button id="copy-btn">Copy</button>
+        </div>
+        <textarea
+          id="output"
+          dir="auto"
+          placeholder="Converted text will appear here..."
+          readonly
+          spellcheck="false"
+        ></textarea>
+      </div>
+    </div>
+  </div>
+
+  <script src="renderer.js"></script>
+</body>
+</html>

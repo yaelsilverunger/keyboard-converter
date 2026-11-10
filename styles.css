@@ -1,0 +1,183 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: #12121f;
+  color: #d0d0e8;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 740px;
+  padding: 28px 28px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e0e0ff;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #666;
+  margin-top: 3px;
+}
+
+/* Direction buttons */
+
+.controls {
+  display: flex;
+  gap: 8px;
+}
+
+.dir-btn {
+  padding: 7px 15px;
+  border-radius: 7px;
+  border: 1px solid #2e2e50;
+  background: #1c1c35;
+  color: #888;
+  cursor: pointer;
+  font-size: 13px;
+  font-family: inherit;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+}
+
+.dir-btn:hover {
+  border-color: #5a4fe8;
+  color: #c0c0f0;
+}
+
+.dir-btn.active {
+  background: #5a4fe8;
+  border-color: #5a4fe8;
+  color: #fff;
+}
+
+.auto-label {
+  font-size: 12px;
+  color: #7a70f0;
+  min-height: 16px;
+  margin-top: -8px;
+}
+
+/* Text panels */
+
+.panels {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  min-width: 0;
+}
+
+.panel-label {
+  font-size: 11px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  font-weight: 500;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+textarea {
+  width: 100%;
+  height: 260px;
+  background: #0c0c1a;
+  border: 1px solid #2a2a45;
+  border-radius: 9px;
+  color: #d8d8f0;
+  font-size: 15px;
+  line-height: 1.65;
+  padding: 14px;
+  resize: none;
+  font-family: inherit;
+  transition: border-color 0.15s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #5a4fe8;
+}
+
+textarea[readonly] {
+  color: #a0a0c8;
+  cursor: default;
+  border-color: #1e1e38;
+}
+
+textarea::placeholder {
+  color: #3a3a5a;
+}
+
+/* Center column */
+
+.center-col {
+  display: flex;
+  align-items: center;
+  padding-top: 28px;
+}
+
+#swap-btn {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #2e2e50;
+  background: #1c1c35;
+  color: #888;
+  font-size: 17px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.15s, color 0.15s;
+  flex-shrink: 0;
+}
+
+#swap-btn:hover {
+  border-color: #5a4fe8;
+  color: #c0c0f0;
+}
+
+/* Copy button */
+
+#copy-btn {
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid #2e2e50;
+  background: #1c1c35;
+  color: #888;
+  cursor: pointer;
+  font-size: 12px;
+  font-family: inherit;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+#copy-btn:hover {
+  border-color: #5a4fe8;
+  color: #c0c0f0;
+}

@@ -1,0 +1,16 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+out/
+
+# Generated files
+icon.png
+
+# Electron dev tools
+.cache/
+
+# OS files
+.DS_Store
+Thumbs.db
